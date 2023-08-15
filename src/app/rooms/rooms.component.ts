@@ -9,4 +9,6 @@ export class RoomsComponent {
 
   hotelName = 'Hilton Hotel';
 
+  numberOfRooms = 10;
+
 }
