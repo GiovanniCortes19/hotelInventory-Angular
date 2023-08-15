@@ -1,4 +1,9 @@
 <h1>Welcome to {{hotelName}}</h1>
 
-Number of Rooms:
-<div [innerText]="numberOfRooms"></div>
+<div [hidden]="hideRooms">
+    Number of Rooms:
+    <div [innerText]="numberOfRooms"></div>
+</div>
+
+<!-- Collect Information by Event Binding -->
+<button (click)="toggle()">Toggle</button>

@@ -11,4 +11,10 @@ export class RoomsComponent {
 
   numberOfRooms = 10;
 
+  hideRooms = false;
+
+  toggle(){
+    this.hideRooms = !this.hideRooms
+  }
+
 }
