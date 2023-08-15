@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
   // <p>Angular is awesome</p>
   // <p>Thank you <strong>Gio</strong></p>
   // `,
-  // styleUrls: ['./app.component.scss'],
-  styles: [
-    'h1{color: green}'
-  ]
+  styleUrls: ['./app.component.scss'],
+  // styles: [
+  //   'h1{color: green}'
+  // ]
 })
 export class AppComponent {
   title = 'hotelInventoryApp';
