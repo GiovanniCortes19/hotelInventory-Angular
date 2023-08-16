@@ -5,11 +5,11 @@
     <div [innerText]="numberOfRooms"></div>
 </div>
 
-<!-- Optional Chain operation -->
-{{ rooms.availableRooms ?? 'No rooms' }}
+<!-- Optional Chain & Nullish Coalescing -->
+<!-- {{ rooms?.availableRooms ?? 'No rooms' }} -->
 
 <!-- Conditional display with *ngIf -->
-<div *ngIf="rooms?.availableRooms">
+<div *ngIf="rooms.availableRooms > 0">
     <h3>Rooms List</h3>
 </div>
 
