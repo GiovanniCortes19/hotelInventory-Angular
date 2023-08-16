@@ -21,6 +21,7 @@ export class RoomsComponent {
   }
 
   roomList: RoomList[] = [{
+    roomNumber: 1,
     roomType: 'Deluxe Room',
     amenities: 'Air Conditioner, Free Wi-Fi, TV, Bathroom, Kitchen',
     price: 500,
@@ -29,6 +30,7 @@ export class RoomsComponent {
     checkoutTime: new Date('14-Nov-2023'),
   }, 
   {
+    roomNumber: 2,
     roomType: 'Deluxe Room',
     amenities: 'Air Conditioner, Free Wi-Fi, TV, Bathroom, Kitchen',
     price: 1000,
@@ -37,6 +39,7 @@ export class RoomsComponent {
     checkoutTime: new Date('3-Dic-2023'),
   },
   {
+    roomNumber: 3,
     roomType: 'Private Suite',
       amenities: 'Air Conditioner, Free Wi-Fi, TV, Bathroom, Kitchen',
       price: 15000,
