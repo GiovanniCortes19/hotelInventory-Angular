@@ -2,7 +2,7 @@
 
 <div [hidden]="hideRooms">
     Number of Rooms:
-    <div [ngStyle]="{'color': rooms.availableRooms ? 'green' : 'red'}" [innerText]="numberOfRooms"></div>
+    <div [ngStyle]="{'color': rooms.availableRooms ? 'green' : 'red'}" [innerText]="rooms.availableRooms"></div>
 </div>
 
 <!-- Optional Chain & Nullish Coalescing -->
@@ -21,10 +21,11 @@
             <th>Room Price</th>
             <th>Room Amenities</th>
             <th>Check-In Time</th>
+            <th>Rating</th>
         </tr>
         <!-- Repeat HTML once per each item with *ngFor -->
         <tr [ngClass]="e ? 'even' : 'odd' "
-            *ngFor="let room of roomList | slice : 0:2 ; let e=even; let o=odd; let i=index">
+            *ngFor="let room of roomList | slice : 0:3 ; let e=even; let o=odd; let i=index">
             <td>{{i}}</td>
             <td>{{ e ? "Even" : "Odd"}}</td>
             <td>{{ room.roomNumber }}</td>
@@ -32,6 +33,7 @@
             <td>{{ room.price | currency }}</td>
             <td>{{ room.amenities | titlecase }}</td>
             <td>{{ room.checkinTime | date }}</td>
+            <td>{{room.rating | number}}</td>
         </tr>
     </table>
 </div>
