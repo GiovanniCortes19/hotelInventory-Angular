@@ -7,7 +7,7 @@
 
 <!-- Optional Chain & Nullish Coalescing -->
 <!-- {{ rooms?.availableRooms ?? 'No rooms' }} -->
-{{roomList | json}}
+<!-- {{roomList | json}} -->
 
 <!-- Conditional display with *ngIf -->
 <div *ngIf="rooms.availableRooms > 0">
@@ -23,7 +23,8 @@
             <th>Check-In Time</th>
         </tr>
         <!-- Repeat HTML once per each item with *ngFor -->
-        <tr [ngClass]="e ? 'even' : 'odd' " *ngFor="let room of roomList; let e=even; let o=odd; let i=index">
+        <tr [ngClass]="e ? 'even' : 'odd' "
+            *ngFor="let room of roomList | slice : 0:2 ; let e=even; let o=odd; let i=index">
             <td>{{i}}</td>
             <td>{{ e ? "Even" : "Odd"}}</td>
             <td>{{ room.roomNumber }}</td>
