@@ -2,7 +2,7 @@
 
 <div [hidden]="hideRooms">
     Number of Rooms:
-    <div [innerText]="numberOfRooms"></div>
+    <div [ngStyle]="{'color': rooms.availableRooms ? 'green' : 'red'}" [innerText]="numberOfRooms"></div>
 </div>
 
 <!-- Optional Chain & Nullish Coalescing -->
