@@ -33,7 +33,7 @@
             <td>{{ room.price | currency }}</td>
             <td>{{ room.amenities | titlecase }}</td>
             <td>{{ room.checkinTime | date }}</td>
-            <td>{{room.rating | number}}</td>
+            <td>{{room.rating | number : '1.0-0'}}</td>
         </tr>
     </table>
 </div>
