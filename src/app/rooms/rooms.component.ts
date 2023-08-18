@@ -14,6 +14,8 @@ export class RoomsComponent implements OnInit {
 
   hideRooms = false;
 
+  selectedRoom!: RoomList;
+
   rooms: Room = {
     totalRooms: 20,
     availableRooms: 10,
@@ -62,7 +64,7 @@ export class RoomsComponent implements OnInit {
   }
 
   selectRoom(room: RoomList){
-    console.log(room);
+    this.selectedRoom = room;
   }
 
 }
