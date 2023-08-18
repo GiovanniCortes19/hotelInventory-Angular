@@ -9,6 +9,7 @@
         <th>Room Amenities</th>
         <th>Check-In Time</th>
         <th>Rating</th>
+        <th>Select Room</th>
     </tr>
     <!-- Repeat HTML once per each item with *ngFor -->
     <tr [ngClass]="e ? 'even' : 'odd' " *ngFor="let room of rooms | slice : 0:3 ; let e=even; let o=odd; let i=index">
@@ -20,5 +21,10 @@
         <td>{{ room.amenities | titlecase }}</td>
         <td>{{ room.checkinTime | date }}</td>
         <td>{{room.rating | number : '1.0-0'}}</td>
+        <td>
+            <button class="btn btn-primary btn-sm" (click)="selectRoom(room)">
+                Select
+            </button>
+        </td>
     </tr>
 </table>
