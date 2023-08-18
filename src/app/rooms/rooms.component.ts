@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Room, RoomList } from './rooms';
 
 @Component({
@@ -6,7 +6,7 @@ import { Room, RoomList } from './rooms';
   templateUrl: './rooms.component.html',
   styleUrls: ['./rooms.component.scss']
 })
-export class RoomsComponent {
+export class RoomsComponent implements OnInit {
 
   hotelName = 'Hilton Hotel';
 
@@ -49,7 +49,11 @@ export class RoomsComponent {
       checkinTime: new Date('30-Nov-2023'),
       checkoutTime: new Date('6-Dic-2023'),
       rating: 2.6
-  }]
+  }];
+
+  constructor (){};
+
+  ngOnInit(): void{}
 
   toggle(){
     this.hideRooms = !this.hideRooms
